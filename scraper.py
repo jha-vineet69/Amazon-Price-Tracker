@@ -31,15 +31,15 @@ def send_mail():
     server.ehlo()
     server.starttls()
     server.ehlo()
-    server.login('vineetjha3388@gmail.com', 'pqqemgdmyvxvapcm')
+    server.login('sendermail', 'password')
 
     subject = 'Price fell down!'
     body = 'Check the amazon link https://www.amazon.in/Samsung-250GB-Internal-Solid-MZ-76E250BW/dp/B079DTMNWC/ref=sr_1_fkmr1_1?keywords=sony+860+evo+250gb+ssd&qid=1563899684&s=gateway&sr=8-1-fkmr1 '
 
     msg = f"Subject: {subject}\n\n{body}"
     server.sendmail(
-        'vineetjha3388@gmail.com',
-        'vineetsuperkool98@gmail.com',
+        'sendermail',
+        'receivermail',
         msg
     )
     print('Hey Email has been sent!!')
